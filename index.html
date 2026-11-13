@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap Java Júnior · 8 meses</title>
+<meta name="description" content="Roadmap de 8 meses para vaga de Java Júnior com checklist diário.">
+<script>try{var t=localStorage.getItem("rm-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow">Java · Spring · Postgres · Docker · Kafka · AWS</p>
+      <h1>Roadmap Java Júnior</h1>
+      <p class="sub">8 meses · 32 semanas · 192 dias de estudo. Segunda a sábado, domingo é descanso.</p>
+    </div>
+    <button id="theme" class="icon" aria-label="Alternar tema"></button>
+  </header>
+
+  <nav class="tabs"><button class="on" data-tab="road">Roadmap</button><button data-tab="proj">Projetos</button></nav>
+  <div id="v-road">
+  <section class="card overall">
+    <div class="row"><strong>Progresso geral</strong><span id="pct">0%</span></div>
+    <div class="bar"><i id="bar"></i></div>
+    <p class="muted" id="count"></p>
+  </section>
+
+  <section class="routine">
+    <div class="card"><b>Manhã · 3h</b><span>45 min de teoria, 1h45 codando, 30 min de commit e flashcards.</span></div>
+    <div class="card"><b>Tarde · 1h</b><span>Seg/Qua/Sex algoritmos · Ter/Qui SQL · Sáb revisão e inglês.</span></div>
+    <div class="card"><b>Regra</b><span>Cada dia termina com um commit. Sem entrega, sem check.</span></div>
+  </section>
+
+  <section id="blocks" class="blocks"></section>
+  </div>
+  <div id="v-proj" class="blocks" hidden></div>
+  <footer><button id="reset" class="ghost">Zerar progresso</button></footer>
+</main>
+<dialog id="dlg"><div class="dh"><div><em id="dk"></em><h3 id="dt"></h3></div><button id="dx" class="icon" aria-label="Fechar">✕</button></div><p class="muted">O que entregar nesta semana</p><div id="db"></div></dialog>
+<script src="app.js"></script>
+</body>
+</html>
