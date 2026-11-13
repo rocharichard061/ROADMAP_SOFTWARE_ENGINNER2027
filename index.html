@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Roadmap de 8 meses para conquistar a primeira vaga Java Back-end Júnior, com estudos, projetos e entregas práticas.">
+  <title>Roadmap Java Back-end Júnior · 2027</title>
+  <script>
+    try {
+      const t = localStorage.getItem("rm-theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = t;
+    } catch (_) { document.documentElement.dataset.theme = "dark"; }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div>
+        <p class="eyebrow">Java 21 · Spring Boot · PostgreSQL · Git · Testes · Docker</p>
+        <h1>Roadmap Java Júnior</h1>
+        <p class="sub">8 meses · 32 semanas · 192 dias de prática. Foco: primeira vaga Back-end Júnior. Domingo livre.</p>
+      </div>
+      <button id="theme" class="icon" type="button" aria-label="Alternar tema"></button>
+    </header>
+
+    <nav class="tabs" aria-label="Seções do roadmap">
+      <button class="on" type="button" data-tab="road" aria-pressed="true">Roadmap</button>
+      <button type="button" data-tab="proj" aria-pressed="false">Projetos</button>
+    </nav>
+
+    <section id="v-road">
+      <div class="card overall">
+        <div class="row"><strong>Progresso geral</strong><strong id="pct">0%</strong></div>
+        <div class="bar" role="progressbar" aria-label="Dias de estudo concluídos" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><i id="bar"></i></div>
+        <p class="muted" id="count">0 de 192 dias concluídos</p>
+      </div>
+
+      <section class="routine" aria-label="Rotina de estudos">
+        <div class="card"><b id="weekdayLabel">Seg–Sex · 2h15/dia</b><span id="weekdayText">30 min de conceito, 1h30 de código e 15 min de revisão.</span></div>
+        <div class="card"><b id="saturdayLabel">Sábado · 3h45</b><span id="saturdayText">2h30 de projeto, 45 min de revisão e 30 min de carreira.</span></div>
+        <div class="card">
+          <b>Modo de estudo</b>
+          <div class="mode-switch" role="group" aria-label="Carga horária">
+            <button type="button" data-mode="aulas" class="on" aria-pressed="true">Faculdade</button>
+            <button type="button" data-mode="ferias" aria-pressed="false">Férias</button>
+          </div>
+          <span id="modeNote">15h/semana. Só marque quando conseguir demonstrar a prática.</span>
+        </div>
+      </section>
+
+      <section id="blocks" class="blocks" aria-label="Meses e semanas do roadmap"></section>
+    </section>
+
+    <section id="v-proj" class="blocks" aria-label="Projetos de portfólio" hidden></section>
+
+    <footer>
+      <button id="export" type="button" class="ghost">Exportar progresso</button>
+      <button id="importButton" type="button" class="ghost">Importar progresso</button>
+      <input id="importFile" type="file" accept="application/json,.json" hidden>
+      <button id="reset" type="button" class="ghost">Zerar progresso</button>
+      <p class="muted">Seus dados ficam salvos neste navegador. Exporte um backup periodicamente.</p>
+    </footer>
+  </main>
+
+  <dialog id="dlg" aria-labelledby="dt">
+    <div class="dh">
+      <div><em id="dk"></em><h3 id="dt"></h3></div>
+      <button id="dx" type="button" class="icon" aria-label="Fechar">✕</button>
+    </div>
+    <p class="muted">O que entregar nesta semana</p>
+    <div id="db"></div>
+  </dialog>
+  <script src="app.js" defer></script>
+</body>
+</html>
